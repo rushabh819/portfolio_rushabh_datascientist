@@ -1422,6 +1422,39 @@
         transition-delay: 0.2s;
       }
 
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 44px;
+        height: 44px;
+        background: var(--cyan);
+        color: var(--btn-cyan-text) !important;
+        border: none;
+        border-radius: 50%;
+        font-size: 1.3rem;
+        cursor: pointer;
+        box-shadow: 0 4px 15px var(--cyan-shadow);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: all var(--tr);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .back-to-top:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 25px var(--btn-shadow-hov);
+        background: var(--cyan-dark);
+      }
+
       /* ── MOBILE NAV ──────────────────────────────────────────── */
       .mob-nav {
         display: none;
@@ -2540,6 +2573,8 @@
       </div>
     </footer>
 
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
     <script>
       const nav = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
@@ -2555,6 +2590,18 @@
             document.getElementById("mobnav").classList.remove("open"),
           ),
         );
+      // Auto-add reveal animation class to elements
+      const elementsToAnimate = document.querySelectorAll('.sec-title, .sec-sub, .about-text p, .am, .trait, .exp-card, .proj-card, .cred-card, .vi');
+      elementsToAnimate.forEach((el, index) => {
+        if (!el.classList.contains('reveal')) {
+          el.classList.add('reveal');
+          // Stagger grids
+          if (el.classList.contains('am') || el.classList.contains('trait') || el.classList.contains('proj-card') || el.classList.contains('cred-card') || el.classList.contains('vi')) {
+             if (index % 2 !== 0) el.classList.add('d1');
+          }
+        }
+      });
+
       const io = new IntersectionObserver(
         (es) =>
           es.forEach((e) => {
@@ -2568,6 +2615,7 @@
       document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
       const secs = document.querySelectorAll("section[id]");
       const navAs = document.querySelectorAll(".nav-links a:not(.nav-cta)");
+      const backToTop = document.getElementById("back-to-top");
       window.addEventListener("scroll", () => {
         let c = "";
         secs.forEach((s) => {
@@ -2577,6 +2625,17 @@
           a.style.color =
             a.getAttribute("href") === "#" + c ? "var(--cyan)" : "";
         });
+
+        // Back to top visibility
+        if (window.scrollY > 400) {
+          backToTop.classList.add("show");
+        } else {
+          backToTop.classList.remove("show");
+        }
+      });
+
+      backToTop.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
 
       // Theme Toggle Logic
