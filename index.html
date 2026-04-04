@@ -6,7 +6,7 @@
     <title>Rushabh Parmar | Data Scientist & ML Engineer | USA</title>
     <meta
       name="description"
-      content="Rushabh Parmar — Data Scientist and ML Engineer with 3+ years building production-grade ML pipelines, predictive models, and LLM applications at Fidelity Investments and Accenture."
+      content="Rushabh Parmar — Data Scientist and ML Engineer with 3+ years building production-grade ML pipelines, predictive models, and LLM applications."
     />
     <meta
       property="og:title"
@@ -19,34 +19,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
       /* ── TOKENS ──────────────────────────────────────────────── */
       :root {
-        --bg: #080c10;
-        --bg2: #0c1118;
-        --panel: #0f1520;
-        --panel2: #131c28;
-        --border: rgba(255, 255, 255, 0.06);
-        --border2: rgba(255, 255, 255, 0.11);
-        --border-hi: rgba(245, 161, 35, 0.35);
-        --text: #dce5ef;
-        --text2: #8fa3b8;
-        --text3: #5b6f83;
-        --gold: #f5a623;
-        --gold-dim: rgba(245, 161, 35, 0.12);
-        --gold-glow: rgba(245, 161, 35, 0.2);
-        --green: #00c896;
-        --green-dim: rgba(0, 200, 150, 0.1);
-        --red: #ff4d6a;
-        --blue: #4d9eff;
-        --ff-mono: "IBM Plex Mono", monospace;
-        --ff-sans: "IBM Plex Sans", sans-serif;
+        --bg: #0f172a;
+        --bg2: #1e293b;
+        --panel: #1e293b;
+        --panel2: #334155;
+        --border: rgba(148, 163, 184, 0.08);
+        --border2: rgba(148, 163, 184, 0.15);
+        --border-hi: rgba(56, 189, 248, 0.35);
+        --text: #f1f5f9;
+        --text2: #94a3b8;
+        --text3: #64748b;
+        --cyan: #38bdf8;
+        --cyan-dim: rgba(56, 189, 248, 0.12);
+        --cyan-glow: rgba(56, 189, 248, 0.2);
+        --blue: #3b82f6;
+        --blue-dim: rgba(59, 130, 246, 0.1);
+        --violet: #a78bfa;
+        
+        --ff-mono: "Fira Code", monospace;
+        --ff-sans: "Inter", sans-serif;
         --r: 4px;
         --r2: 8px;
         --tr: 0.25s ease;
+
+        --body-bg: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+        --selection-color: #0f172a;
+        --grid-line: rgba(148, 163, 184, 0.025);
+        --nav-bg: rgba(15, 23, 42, 0.94);
+        --sec-dark-bg: linear-gradient(135deg, rgba(15, 23, 42, 0.4) 0%, rgba(2, 6, 23, 0.5) 100%);
+        --btn-cyan-text: #0f172a;
+        --btn-cyan-border: rgba(255, 255, 255, 0.2);
+        --cyan-shadow: rgba(56, 189, 248, 0.25);
+        --cyan-dark: #0284c7;
+        --btn-shadow-hov: rgba(56, 189, 248, 0.4);
+        --btn-border-hov: rgba(255, 255, 255, 0.4);
+        --card-bg: rgba(30, 41, 59, 0.45);
+        --card-header-bg: rgba(51, 65, 85, 0.55);
+      }
+
+      [data-theme="light"] {
+        --bg: #f8f9fa;
+        --bg2: #ffffff;
+        --panel: #ffffff;
+        --panel2: #f1f3f5;
+        --border: rgba(0, 0, 0, 0.08);
+        --border2: rgba(0, 0, 0, 0.14);
+        --border-hi: rgba(0, 85, 255, 0.35);
+        --text: #212529;
+        --text2: #495057;
+        --text3: #6c757d;
+        --cyan: #0055ff;  
+        --cyan-dim: rgba(0, 85, 255, 0.12);
+        --cyan-glow: rgba(0, 85, 255, 0.2);
+        --blue: #0044cc;
+        --blue-dim: rgba(0, 68, 204, 0.1);
+        --violet: #6f42c1;
+
+        --body-bg: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+        --selection-color: #ffffff;
+        --grid-line: rgba(0, 85, 255, 0.03);
+        --nav-bg: rgba(255, 255, 255, 0.94);
+        --sec-dark-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(241, 245, 249, 0.5) 100%);
+        --btn-cyan-text: #ffffff;
+        --btn-cyan-border: rgba(0, 85, 255, 0.4);
+        --cyan-shadow: rgba(0, 85, 255, 0.25);
+        --cyan-dark: #0033cc;
+        --btn-shadow-hov: rgba(0, 85, 255, 0.45);
+        --btn-border-hov: rgba(0, 85, 255, 0.6);
+        --card-bg: rgba(255, 255, 255, 0.65);
+        --card-header-bg: rgba(240, 244, 248, 0.9);
+      }
+      
+      .theme-btn {
+        background: transparent;
+        border: 1px solid var(--border2);
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text3);
+        cursor: pointer;
+        transition: all var(--tr);
+        margin-left: 12px;
+        font-size: 14px;
+      }
+      .theme-btn:hover {
+        border-color: var(--cyan);
+        color: var(--cyan);
+        transform: scale(1.05);
       }
 
       *,
@@ -61,7 +129,8 @@
       }
       body {
         font-family: var(--ff-sans);
-        background: var(--bg);
+        background: var(--body-bg);
+        background-attachment: fixed;
         color: var(--text);
         line-height: 1.65;
         overflow-x: hidden;
@@ -72,8 +141,8 @@
         text-decoration: none;
       }
       ::selection {
-        background: var(--gold);
-        color: #000;
+        background: var(--cyan);
+        color: var(--selection-color);
       }
       ::-webkit-scrollbar {
         width: 3px;
@@ -82,7 +151,7 @@
         background: var(--bg);
       }
       ::-webkit-scrollbar-thumb {
-        background: var(--gold);
+        background: var(--cyan);
       }
 
       body::before {
@@ -92,16 +161,36 @@
         z-index: 0;
         pointer-events: none;
         background-image:
-          linear-gradient(rgba(245, 161, 35, 0.022) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(245, 161, 35, 0.022) 1px, transparent 1px);
-        background-size: 52px 52px;
+          radial-gradient(var(--border2) 1px, transparent 1px),
+          linear-gradient(var(--grid-line) 1px, transparent 1px),
+          linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+        background-size: 20px 20px, 80px 80px, 80px 80px;
+        background-position: 0 0, -1px -1px, -1px -1px;
+      }
+
+      /* ── FLOATING NODES ── */
+      .floating-nodes { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+      .node { position: absolute; width: 6px; height: 6px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 14px var(--cyan), 0 0 4px #fff; animation: floatNode 8s infinite alternate ease-in-out; }
+      .node::after { content: ""; position: absolute; width: 80px; height: 1px; background: linear-gradient(90deg, var(--cyan), transparent); top: 50%; left: 100%; opacity: 0.3; transform-origin: left center; transform: rotate(45deg); }
+      .n1 { top: 20%; left: 5%; animation-delay: 0s; }
+      .n2 { top: 60%; left: 85%; animation-delay: -2s; width: 4px; height: 4px; background: var(--blue); box-shadow: 0 0 10px var(--blue); }
+      .n2::after { background: linear-gradient(90deg, var(--blue), transparent); transform: rotate(135deg); width: 120px; }
+      .n3 { top: 15%; left: 70%; animation-delay: -4s; width: 8px; height: 8px; background: var(--violet); box-shadow: 0 0 12px var(--violet); }
+      .n3::after { background: linear-gradient(90deg, var(--violet), transparent); transform: rotate(15deg); }
+      .n4 { top: 80%; left: 15%; animation-delay: -1s; width: 5px; height: 5px; background: var(--cyan); }
+      .n4::after { transform: rotate(-35deg); }
+      @keyframes floatNode {
+        0% { transform: translateY(0) translateX(0); }
+        100% { transform: translateY(-40px) translateX(20px); }
       }
 
       /* ── TICKER ──────────────────────────────────────────────── */
       .ticker-wrap {
         width: 100%;
         overflow: hidden;
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border);
         padding: 9px 0;
         position: relative;
@@ -124,14 +213,14 @@
         flex-shrink: 0;
       }
       .ticker-item .sym {
-        color: var(--gold);
+        color: var(--cyan);
         font-weight: 600;
       }
       .ticker-item .up {
-        color: var(--green);
+        color: var(--blue);
       }
       .ticker-item .dn {
-        color: var(--red);
+        color: var(--violet);
       }
       @keyframes ticker {
         from {
@@ -156,7 +245,7 @@
       }
       nav.scrolled {
         top: 0;
-        background: rgba(8, 12, 16, 0.94);
+        background: var(--nav-bg);
         backdrop-filter: blur(20px);
         border-bottom: 1px solid var(--border);
       }
@@ -173,7 +262,7 @@
         font-family: var(--ff-mono);
         font-weight: 700;
         font-size: 0.9rem;
-        color: var(--gold);
+        color: var(--cyan);
         letter-spacing: 0.12em;
         text-transform: uppercase;
       }
@@ -203,20 +292,20 @@
         left: 0;
         right: 0;
         height: 1px;
-        background: var(--gold);
+        background: var(--cyan);
         transform: scaleX(0);
         transform-origin: left;
         transition: transform var(--tr);
       }
       .nav-links a:hover {
-        color: var(--gold);
+        color: var(--cyan);
       }
       .nav-links a:hover::after {
         transform: scaleX(1);
       }
       .nav-cta {
-        background: var(--gold) !important;
-        color: #000 !important;
+        background: var(--cyan) !important;
+        color: var(--btn-cyan-text) !important;
         padding: 8px 18px;
         font-weight: 700 !important;
         letter-spacing: 0.06em !important;
@@ -226,7 +315,7 @@
         display: none !important;
       }
       .nav-cta:hover {
-        box-shadow: 0 0 20px var(--gold-glow) !important;
+        box-shadow: 0 0 20px var(--cyan-glow) !important;
       }
       .hamburger {
         display: none;
@@ -254,7 +343,33 @@
         padding: 96px 0;
       }
       .sec-dark {
-        background: var(--bg2);
+        background: var(--sec-dark-bg);
+        position: relative;
+        overflow: hidden;
+      }
+      .sec-dark::before {
+        content: "";
+        position: absolute;
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(circle, rgba(0, 102, 255, 0.04) 0%, transparent 60%);
+        top: -300px;
+        right: -100px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
+      }
+      .sec-dark::after {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(0, 229, 255, 0.035) 0%, transparent 60%);
+        bottom: -200px;
+        left: -150px;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: -1;
       }
       .hr {
         height: 1px;
@@ -266,7 +381,7 @@
         font-family: var(--ff-mono);
         font-size: 0.66rem;
         font-weight: 600;
-        color: var(--gold);
+        color: var(--cyan);
         letter-spacing: 0.2em;
         text-transform: uppercase;
         display: flex;
@@ -279,7 +394,7 @@
         display: block;
         width: 18px;
         height: 1px;
-        background: var(--gold);
+        background: var(--cyan);
       }
       .sec-title {
         font-family: var(--ff-mono);
@@ -300,12 +415,12 @@
       }
 
       /* ── BUTTONS ─────────────────────────────────────────────── */
-      .btn-gold {
+      .btn-cyan {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: var(--gold);
-        color: #000;
+        background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
+        color: var(--btn-cyan-text);
         font-family: var(--ff-mono);
         font-weight: 700;
         font-size: 0.76rem;
@@ -313,13 +428,17 @@
         text-transform: uppercase;
         padding: 13px 24px;
         border-radius: var(--r);
+        border: 1px solid var(--btn-cyan-border);
+        box-shadow: 0 4px 15px var(--cyan-shadow);
         transition:
+          border-color var(--tr),
           box-shadow var(--tr),
           transform var(--tr);
       }
-      .btn-gold:hover {
-        box-shadow: 0 0 28px var(--gold-glow);
-        transform: translateY(-2px);
+      .btn-cyan:hover {
+        box-shadow: 0 8px 30px var(--btn-shadow-hov);
+        border-color: var(--btn-border-hov);
+        transform: translateY(-3px);
       }
       .btn-outline {
         display: inline-flex;
@@ -342,15 +461,17 @@
           transform var(--tr);
       }
       .btn-outline:hover {
-        border-color: var(--gold);
-        color: var(--gold);
-        background: var(--gold-dim);
+        border-color: var(--cyan);
+        color: var(--cyan);
+        background: var(--cyan-dim);
         transform: translateY(-2px);
       }
 
       /* ── PANEL / CARD ────────────────────────────────────────── */
       .panel {
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         border: 1px solid var(--border2);
         border-radius: var(--r2);
         overflow: hidden;
@@ -361,21 +482,23 @@
         gap: 10px;
         padding: 11px 18px;
         border-bottom: 1px solid var(--border);
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
       }
       .panel-dot {
         width: 8px;
         height: 8px;
         border-radius: 50%;
       }
-      .dot-gold {
-        background: var(--gold);
+      .dot-cyan {
+        background: var(--cyan);
       }
-      .dot-green {
-        background: var(--green);
+      .dot-blue {
+        background: var(--blue);
       }
-      .dot-red {
-        background: var(--red);
+      .dot-violet {
+        background: var(--violet);
       }
       .panel-title {
         font-family: var(--ff-mono);
@@ -397,12 +520,12 @@
         background:
           radial-gradient(
             ellipse 60% 50% at 70% 50%,
-            rgba(245, 161, 35, 0.055) 0%,
+            rgba(0, 229, 255, 0.055) 0%,
             transparent 70%
           ),
           radial-gradient(
             ellipse 40% 40% at 10% 80%,
-            rgba(0, 200, 150, 0.04) 0%,
+            rgba(0, 102, 255, 0.04) 0%,
             transparent 60%
           );
       }
@@ -419,10 +542,10 @@
         font-family: var(--ff-mono);
         font-size: 0.68rem;
         font-weight: 600;
-        color: var(--green);
+        color: var(--blue);
         letter-spacing: 0.08em;
-        border: 1px solid rgba(0, 200, 150, 0.25);
-        background: var(--green-dim);
+        border: 1px solid rgba(0, 102, 255, 0.25);
+        background: var(--blue-dim);
         border-radius: 2px;
         padding: 5px 12px;
         margin-bottom: 28px;
@@ -432,7 +555,7 @@
         width: 6px;
         height: 6px;
         border-radius: 50%;
-        background: var(--green);
+        background: var(--blue);
         animation: blink 1.4s infinite;
         flex-shrink: 0;
       }
@@ -453,8 +576,8 @@
         letter-spacing: -0.025em;
         animation: fadeUp 0.55s 0.07s ease both;
       }
-      .hero-name .gold {
-        color: var(--gold);
+      .hero-name .cyan {
+        color: var(--cyan);
       }
       .hero-title-bar {
         display: flex;
@@ -474,7 +597,7 @@
         font-family: var(--ff-mono);
         font-size: 0.76rem;
         font-weight: 500;
-        color: var(--gold);
+        color: var(--cyan);
         letter-spacing: 0.16em;
         text-transform: uppercase;
         white-space: nowrap;
@@ -510,13 +633,13 @@
         border-right: none;
       }
       .kpi:hover {
-        background: var(--gold-dim);
+        background: var(--cyan-dim);
       }
       .kpi-val {
         font-family: var(--ff-mono);
         font-size: 1.5rem;
         font-weight: 700;
-        color: var(--green);
+        color: var(--blue);
         line-height: 1;
       }
       .kpi-label {
@@ -548,13 +671,13 @@
         color: var(--text3);
       }
       .terminal-line .prompt {
-        color: var(--gold);
+        color: var(--cyan);
       }
       .terminal-line .cmd {
         color: var(--text2);
       }
       .terminal-line .val {
-        color: var(--green);
+        color: var(--blue);
       }
       .terminal-line .str {
         color: #79c0ff;
@@ -585,14 +708,14 @@
           color var(--tr);
       }
       .stack-item:hover {
-        border-color: rgba(245, 161, 35, 0.3);
-        color: var(--gold);
+        border-color: rgba(0, 229, 255, 0.3);
+        color: var(--cyan);
       }
       .sdot {
         width: 5px;
         height: 5px;
         border-radius: 50%;
-        background: var(--gold);
+        background: var(--cyan);
         flex-shrink: 0;
       }
       .cert-chips {
@@ -605,13 +728,13 @@
         display: inline-flex;
         align-items: center;
         gap: 5px;
-        background: var(--gold-dim);
+        background: var(--cyan-dim);
         border: 1px solid var(--border-hi);
         border-radius: var(--r);
         padding: 4px 9px;
         font-family: var(--ff-mono);
         font-size: 0.62rem;
-        color: var(--gold);
+        color: var(--cyan);
         font-weight: 600;
       }
 
@@ -642,7 +765,9 @@
         border: 1px solid var(--border2);
         border-radius: var(--r2);
         padding: 18px;
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         transition:
           border-color var(--tr),
           transform var(--tr);
@@ -655,7 +780,7 @@
         font-family: var(--ff-mono);
         font-size: 1.45rem;
         font-weight: 700;
-        color: var(--gold);
+        color: var(--cyan);
         line-height: 1;
       }
       .am-label {
@@ -677,7 +802,9 @@
         border: 1px solid var(--border);
         border-radius: var(--r2);
         padding: 17px 19px;
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         transition:
           border-color var(--tr),
           transform var(--tr),
@@ -686,12 +813,14 @@
       .trait:hover {
         border-color: var(--border-hi);
         transform: translateX(5px);
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
       }
       .trait-num {
         font-family: var(--ff-mono);
         font-size: 0.66rem;
-        color: var(--gold);
+        color: var(--cyan);
         font-weight: 700;
         padding-top: 2px;
         min-width: 20px;
@@ -718,14 +847,18 @@
         overflow: hidden;
       }
       .skill-cat {
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         padding: 26px 22px;
         border-right: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
         transition: background var(--tr);
       }
       .skill-cat:hover {
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
       }
       .skill-cat:nth-child(3n) {
         border-right: none;
@@ -737,7 +870,7 @@
         font-family: var(--ff-mono);
         font-size: 0.62rem;
         font-weight: 700;
-        color: var(--gold);
+        color: var(--cyan);
         text-transform: uppercase;
         letter-spacing: 0.15em;
         margin-bottom: 5px;
@@ -751,20 +884,21 @@
       }
       .skill-list {
         display: flex;
-        flex-direction: column;
-        gap: 6px;
+        flex-wrap: wrap;
+        gap: 8px;
       }
       .skill-row {
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        background: var(--cyan-dim);
+        border: 1px solid var(--border-hi);
+        border-radius: 6px;
+        padding: 5px 10px;
         font-size: 0.76rem;
-        color: var(--text2);
+        color: var(--text);
+        transition: transform var(--tr), background var(--tr);
       }
-      .skill-row::before {
-        content: "▸";
-        color: var(--gold);
-        font-size: 0.58rem;
+      .skill-row:hover {
+        transform: translateY(-2px);
+        background: rgba(0, 229, 255, 0.15);
       }
 
       /* ── EXPERIENCE ──────────────────────────────────────────── */
@@ -776,18 +910,24 @@
       .exp-card {
         border: 1px solid var(--border2);
         border-radius: var(--r2);
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         overflow: hidden;
         transition: border-color var(--tr);
       }
       .exp-card:hover {
         border-color: var(--border-hi);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
       }
       .exp-header {
         display: grid;
         grid-template-columns: 1fr auto;
         padding: 20px 26px;
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border);
         align-items: start;
         gap: 16px;
@@ -795,7 +935,7 @@
       .exp-company {
         font-family: var(--ff-mono);
         font-size: 0.7rem;
-        color: var(--gold);
+        color: var(--cyan);
         font-weight: 600;
         letter-spacing: 0.1em;
         text-transform: uppercase;
@@ -838,7 +978,7 @@
         line-height: 1.65;
       }
       .exp-bullets li .arr {
-        color: var(--gold);
+        color: var(--cyan);
         font-family: var(--ff-mono);
         font-size: 0.68rem;
         flex-shrink: 0;
@@ -877,7 +1017,9 @@
       .proj-card {
         border: 1px solid var(--border2);
         border-radius: var(--r2);
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         overflow: hidden;
         transition:
           border-color var(--tr),
@@ -891,7 +1033,9 @@
       }
       .proj-chart-area {
         height: 80px;
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         border-bottom: 1px solid var(--border);
         position: relative;
         overflow: hidden;
@@ -909,7 +1053,7 @@
         font-family: var(--ff-mono);
         font-size: 0.6rem;
         font-weight: 700;
-        color: var(--gold);
+        color: var(--cyan);
         text-transform: uppercase;
         letter-spacing: 0.14em;
         margin-bottom: 9px;
@@ -921,6 +1065,8 @@
         color: var(--text);
         margin-bottom: 11px;
       }
+      .cs-section { margin-top: 14px; margin-bottom: 8px; }
+      .cs-label { font-family: var(--ff-mono); font-size: 0.68rem; color: var(--cyan); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
       .proj-desc {
         font-size: 0.83rem;
         color: var(--text2);
@@ -936,7 +1082,7 @@
         font-family: var(--ff-mono);
         font-size: 1.25rem;
         font-weight: 700;
-        color: var(--green);
+        color: var(--blue);
       }
       .proj-kpi-label {
         font-size: 0.62rem;
@@ -969,7 +1115,9 @@
       .cred-card {
         border: 1px solid var(--border2);
         border-radius: var(--r2);
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         overflow: hidden;
         transition:
           border-color var(--tr),
@@ -980,7 +1128,9 @@
         transform: translateY(-3px);
       }
       .cred-header {
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         padding: 12px 18px;
         border-bottom: 1px solid var(--border);
       }
@@ -1009,7 +1159,7 @@
       .cred-org {
         font-family: var(--ff-mono);
         font-size: 0.7rem;
-        color: var(--gold);
+        color: var(--cyan);
         font-weight: 600;
       }
       .cred-period {
@@ -1032,16 +1182,16 @@
         align-items: start;
       }
       .value-quote {
-        border-left: 2px solid var(--gold);
+        border-left: 2px solid var(--cyan);
         padding: 16px 18px;
         margin-top: 26px;
-        background: var(--gold-dim);
+        background: var(--cyan-dim);
         border-radius: 0 var(--r2) var(--r2) 0;
       }
       .value-quote p {
         font-family: var(--ff-mono);
         font-size: 0.8rem;
-        color: var(--gold);
+        color: var(--cyan);
         line-height: 1.65;
         font-style: italic;
         margin: 0;
@@ -1058,7 +1208,9 @@
         border: 1px solid var(--border);
         border-radius: var(--r2);
         padding: 18px 20px;
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         transition:
           border-color var(--tr),
           transform var(--tr),
@@ -1066,13 +1218,15 @@
       }
       .vi:hover {
         border-color: var(--border-hi);
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         transform: translateX(5px);
       }
       .vi-num {
         font-family: var(--ff-mono);
         font-size: 0.66rem;
-        color: var(--gold);
+        color: var(--cyan);
         font-weight: 700;
         min-width: 26px;
         padding-top: 1px;
@@ -1094,7 +1248,7 @@
       #contact {
         background: radial-gradient(
           ellipse 70% 80% at 50% 100%,
-          rgba(245, 161, 35, 0.065) 0%,
+          rgba(0, 229, 255, 0.065) 0%,
           transparent 70%
         );
       }
@@ -1111,8 +1265,8 @@
         line-height: 1.15;
         letter-spacing: -0.02em;
       }
-      .contact-headline .gold {
-        color: var(--gold);
+      .contact-headline .cyan {
+        color: var(--cyan);
       }
       .contact-sub {
         color: var(--text2);
@@ -1126,13 +1280,13 @@
         align-items: center;
         gap: 9px;
         margin-top: 22px;
-        background: var(--green-dim);
-        border: 1px solid rgba(0, 200, 150, 0.25);
+        background: var(--blue-dim);
+        border: 1px solid rgba(0, 102, 255, 0.25);
         border-radius: 2px;
         padding: 9px 14px;
         font-family: var(--ff-mono);
         font-size: 0.7rem;
-        color: var(--green);
+        color: var(--blue);
         font-weight: 600;
       }
       .clinks {
@@ -1147,7 +1301,9 @@
         border: 1px solid var(--border2);
         border-radius: var(--r2);
         padding: 15px 19px;
-        background: var(--panel);
+        background: var(--card-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         transition:
           border-color var(--tr),
           transform var(--tr),
@@ -1155,7 +1311,9 @@
       }
       .cl:hover {
         border-color: var(--border-hi);
-        background: var(--panel2);
+        background: var(--card-header-bg);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
         transform: translateX(5px);
       }
       .cl-icon {
@@ -1163,7 +1321,7 @@
         width: 34px;
         height: 34px;
         border-radius: var(--r);
-        background: var(--gold-dim);
+        background: var(--cyan-dim);
         border: 1px solid var(--border-hi);
         display: flex;
         align-items: center;
@@ -1210,7 +1368,7 @@
         font-family: var(--ff-mono);
         font-weight: 700;
         font-size: 0.8rem;
-        color: var(--gold);
+        color: var(--cyan);
         letter-spacing: 0.1em;
         text-transform: uppercase;
       }
@@ -1227,7 +1385,7 @@
         text-transform: uppercase;
       }
       .footer-links a:hover {
-        color: var(--gold);
+        color: var(--cyan);
       }
       .footer-copy {
         font-family: var(--ff-mono);
@@ -1291,10 +1449,10 @@
         transition: color var(--tr);
       }
       .mob-nav a:hover {
-        color: var(--gold);
+        color: var(--cyan);
       }
       .mob-nav .mob-cta {
-        background: var(--gold);
+        background: var(--cyan);
         color: #000;
         text-align: center;
         margin-top: 11px;
@@ -1361,11 +1519,11 @@
       <div class="ticker-inner">
         <div class="ticker-item">
           <span class="sym">RISK_PRECISION</span> <span class="up">▲ +22%</span>
-          <span>FIDELITY · ML</span>
+          <span>ENTERPRISE · ML</span>
         </div>
         <div class="ticker-item">
           <span class="sym">PIPELINE_SPEED</span> <span class="up">▲ +30%</span>
-          <span>ACCENTURE · PYSPARK</span>
+          <span>FINTECH · PYSPARK</span>
         </div>
         <div class="ticker-item">
           <span class="sym">MODEL_RELIABILITY</span>
@@ -1397,11 +1555,11 @@
         </div>
         <div class="ticker-item">
           <span class="sym">RISK_PRECISION</span> <span class="up">▲ +22%</span>
-          <span>FIDELITY · ML</span>
+          <span>ENTERPRISE · ML</span>
         </div>
         <div class="ticker-item">
           <span class="sym">PIPELINE_SPEED</span> <span class="up">▲ +30%</span>
-          <span>ACCENTURE · PYSPARK</span>
+          <span>FINTECH · PYSPARK</span>
         </div>
         <div class="ticker-item">
           <span class="sym">MODEL_RELIABILITY</span>
@@ -1445,6 +1603,7 @@
           <a href="#projects">Projects</a>
           <a href="#certifications">Credentials</a>
           <a href="#contact" class="nav-cta">Hire Me</a>
+          <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">☀️</button>
         </div>
         <div class="hamburger" id="ham">
           <span></span><span></span><span></span>
@@ -1463,28 +1622,26 @@
     <!-- ── HERO ────────────────────────────────────────────────────── -->
     <section id="hero">
       <div class="container">
-        <div class="hero-layout">
+        <div class="floating-nodes">
+            <div class="node n1"></div>
+            <div class="node n2"></div>
+            <div class="node n3"></div>
+            <div class="node n4"></div>
+          </div>
+          <div class="hero-layout" style="position: relative; z-index: 2;">
           <div>
             <div class="hero-tag">
               <span class="status-blink"></span>Open to Full-Time Opportunities
               · USA
             </div>
-            <h1 class="hero-name">
-              Turning Financial<br />Data into<br /><span class="gold"
-                >Decisions.</span
-              >
+            <h1 class="hero-name" style="font-size: 3.2rem; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 24px;">
+              Turning complex data into <br/><span class="cyan">reliable models, scalable pipelines, and business impact.</span>
             </h1>
             <div class="hero-title-bar">
-              <span class="hero-title-text"
-                >Data Scientist &amp; ML Engineer</span
-              >
+              <span class="hero-title-text">Data Scientist | Data Engineer | Data Analyst</span>
             </div>
             <p class="hero-desc">
-              I'm <strong>Rushabh Parmar</strong> — a Data Scientist who builds
-              production-grade ML systems for high-stakes financial
-              environments. At <strong>Fidelity Investments</strong>, I ship
-              models on live data streams with 95%+ reliability, integrate LLM
-              workflows, and deliver measurable risk outcomes.
+              I am a data professional at the intersection of machine learning, analytics, and data engineering. I build scalable data pipelines, deploy production-minded models, and communicate business outcomes clearly.
             </p>
             <div class="hero-kpi-row">
               <div class="kpi">
@@ -1493,7 +1650,7 @@
               </div>
               <div class="kpi">
                 <div class="kpi-val">+22%</div>
-                <div class="kpi-label">Risk Precision</div>
+                <div class="kpi-label">Prediction Precision</div>
               </div>
               <div class="kpi">
                 <div class="kpi-val">95%+</div>
@@ -1505,17 +1662,18 @@
               </div>
             </div>
             <div class="hero-btns">
-              <a href="#contact" class="btn-gold">→ Let's Talk</a>
-              <a href="#projects" class="btn-outline">View Projects</a>
+              <a href="#projects" class="btn-cyan">→ View Projects</a>
+              <a href="#" class="btn-outline">Download Resume</a>
+              <a href="#contact" class="btn-outline">Contact Me</a>
             </div>
           </div>
 
           <div class="hero-panel">
             <div class="panel">
               <div class="panel-header">
-                <div class="panel-dot dot-green"></div>
-                <div class="panel-dot dot-gold"></div>
-                <div class="panel-dot dot-red"></div>
+                <div class="panel-dot dot-blue"></div>
+                <div class="panel-dot dot-cyan"></div>
+                <div class="panel-dot dot-violet"></div>
                 <span class="panel-title">profile.py</span>
               </div>
               <div class="panel-body">
@@ -1531,8 +1689,8 @@
                   <span class="val">"Data Scientist"</span>,
                 </div>
                 <div class="terminal-line" style="padding-left: 14px">
-                  <span class="str">"company"</span>:
-                  <span class="val">"Fidelity Investments"</span>,
+                  <span class="str">"domain"</span>:
+                  <span class="val">"Machine Learning"</span>,
                 </div>
                 <div class="terminal-line" style="padding-left: 14px">
                   <span class="str">"location"</span>:
@@ -1543,7 +1701,7 @@
                 </div>
                 <div class="terminal-line" style="padding-left: 14px">
                   <span class="str">"open_to_work"</span>:
-                  <span class="val" style="color: var(--green)">True</span>
+                  <span class="val" style="color: var(--blue)">True</span>
                 </div>
                 <div class="terminal-line">}</div>
                 <div class="term-div"></div>
@@ -1618,34 +1776,23 @@
           <div class="reveal">
             <div class="sec-label">About Me</div>
             <h2 class="sec-title" style="margin-bottom: 22px">
-              I build ML that performs under pressure.
+              I bridge the gap between complex data and strategic business value.
             </h2>
             <div class="about-text">
               <p>
-                My career has been built around
-                <strong>production ML systems</strong> in regulated,
-                data-intensive environments where model failures carry real
-                consequences — financial risk, customer behavior, document
-                intelligence.
+                My career is built on a foundation of combining robust data engineering platforms, advanced predictive modeling, and rigorous analytics to solve cross-industry challenges. I don't just build models; I architect the entire data lifecycle.
               </p>
               <p>
-                At <strong>Fidelity Investments</strong>, I'm integrating
-                LLM-powered RAG pipelines and gradient boosted risk models into
-                live financial data streams. Before that at
-                <strong>Accenture</strong>, I led ML pipeline development across
-                enterprise-scale datasets, improving speed, reliability, and
-                model performance in measurable ways.
+                At global financial and technology enterprises, I have designed scalable feature pipelines, deployed containerized real-time ML systems, and led rigorous experimentation frameworks to drive data-driven decision-making and operational efficiency.
               </p>
               <p>
-                I'm equally comfortable designing a feature engineering
-                pipeline, containerizing a model, explaining SHAP values to a
-                compliance team, or running an A/B test on a new rollout.
+                I thrive at the intersection of roles: equally comfortable optimizing a PySpark data pipeline, training an XGBoost prediction model, or breaking down A/B test results to non-technical business stakeholders.
               </p>
             </div>
             <div class="about-metrics">
               <div class="am">
                 <div class="am-val">↑22%</div>
-                <div class="am-label">Risk Precision @ Fidelity</div>
+                <div class="am-label">Prediction Precision @ Fidelity</div>
               </div>
               <div class="am">
                 <div class="am-val">↑30%</div>
@@ -1680,11 +1827,10 @@
               <div class="trait">
                 <div class="trait-num">02</div>
                 <div>
-                  <div class="trait-title">Fintech Domain Depth</div>
+                  <div class="trait-title">High-Stakes Rigor & Explainability</div>
                   <div class="trait-desc">
-                    Deep hands-on experience with financial risk modeling, ECOA
-                    compliance, and regulatory explainability using SHAP and
-                    LIME.
+                    Proven experience delivering models under strict compliance
+                    and regulatory requirements, utilizing SHAP for transparent AI decision-making.
                   </div>
                 </div>
               </div>
@@ -1731,7 +1877,7 @@
         <div class="skills-layout reveal">
           <div class="skill-cat">
             <div class="skill-cat-num">01</div>
-            <div class="skill-cat-name">Machine Learning</div>
+            <div class="skill-cat-name">🤖 Machine Learning</div>
             <div class="skill-list">
               <div class="skill-row">XGBoost &amp; LightGBM</div>
               <div class="skill-row">Scikit-Learn</div>
@@ -1743,7 +1889,7 @@
           </div>
           <div class="skill-cat">
             <div class="skill-cat-num">02</div>
-            <div class="skill-cat-name">Deep Learning &amp; LLMs</div>
+            <div class="skill-cat-name">🧠 Deep Learning &amp; LLMs</div>
             <div class="skill-list">
               <div class="skill-row">TensorFlow &amp; PyTorch</div>
               <div class="skill-row">PyTorch Geometric (GNN)</div>
@@ -1754,7 +1900,7 @@
           </div>
           <div class="skill-cat">
             <div class="skill-cat-num">03</div>
-            <div class="skill-cat-name">MLOps &amp; Deployment</div>
+            <div class="skill-cat-name">⚙️ MLOps &amp; Deployment</div>
             <div class="skill-list">
               <div class="skill-row">FastAPI</div>
               <div class="skill-row">MLflow</div>
@@ -1765,7 +1911,7 @@
           </div>
           <div class="skill-cat">
             <div class="skill-cat-num">04</div>
-            <div class="skill-cat-name">Data Engineering</div>
+            <div class="skill-cat-name">⚡ Data Engineering</div>
             <div class="skill-list">
               <div class="skill-row">PySpark &amp; Apache Spark</div>
               <div class="skill-row">Databricks</div>
@@ -1776,7 +1922,7 @@
           </div>
           <div class="skill-cat">
             <div class="skill-cat-num">05</div>
-            <div class="skill-cat-name">Cloud &amp; Infrastructure</div>
+            <div class="skill-cat-name">☁️ Cloud &amp; Platforms</div>
             <div class="skill-list">
               <div class="skill-row">AWS SageMaker</div>
               <div class="skill-row">AWS S3, Lambda, Glue</div>
@@ -1786,7 +1932,7 @@
           </div>
           <div class="skill-cat">
             <div class="skill-cat-num">06</div>
-            <div class="skill-cat-name">Languages &amp; Statistics</div>
+            <div class="skill-cat-name">📊 Analytics &amp; Statistics</div>
             <div class="skill-list">
               <div class="skill-row">Python &amp; SQL</div>
               <div class="skill-row">R</div>
@@ -1820,7 +1966,7 @@
               </div>
               <div class="exp-period">
                 Nov 2025 — Present<br /><span
-                  style="color: var(--green); font-size: 0.62rem"
+                  style="color: var(--blue); font-size: 0.62rem"
                   >● Current Role</span
                 >
               </div>
@@ -1831,7 +1977,7 @@
                   <span class="arr">▸</span
                   ><span
                     >Built end-to-end ML pipelines for
-                    <strong>large-scale financial datasets</strong> using
+                    <strong>enterprise-scale datasets</strong> using
                     PySpark, Spark, and Databricks — serving live production
                     data streams at scale.</span
                   >
@@ -1840,10 +1986,10 @@
                   <span class="arr">▸</span
                   ><span
                     >Developed predictive models for
-                    <strong>customer behavior and financial risk</strong> with
+                    <strong>customer behavior and multidimensional risk</strong> with
                     XGBoost and gradient boosting;
                     <strong
-                      >improved risk identification precision by 22%</strong
+                      >improved model prediction precision by 22%</strong
                     >.</span
                   >
                 </li>
@@ -2046,7 +2192,7 @@
                   fill="#F5A623"
                   opacity="0.55"
                 >
-                  RISK SCORE CURVE
+                  PREDICTION ACCURACY CURVE
                 </text>
                 <text
                   x="14"
@@ -2055,27 +2201,28 @@
                   font-size="8.5"
                   fill="#5b6f83"
                 >
-                  LOAN PRICING · ECOA COMPLIANT
+                  DYNAMIC OPTIMIZATION · COMPLIANT
                 </text>
               </svg>
             </div>
             <div class="proj-body">
-              <div class="proj-tag">01 / Fintech Risk</div>
-              <h3 class="proj-title">Risk-Based Loan Pricing Engine</h3>
-              <p class="proj-desc">
-                An XGBoost-powered loan pricing system that dynamically adjusts
-                interest rates based on borrower risk profiles, with ECOA
-                compliance guardrails built in. Reduced manual underwriting
-                effort by 25% while improving pricing precision across risk
-                tiers.
-              </p>
+              <div class="proj-tag">01 / Optimization</div>
+              <h3 class="proj-title">Dynamic Pricing & Optimization Engine</h3>
+              <div class="cs-section">
+                <div class="cs-label">Context & Problem</div>
+                <p class="proj-desc">Designed to address inefficient loan pricing strategies that relied heavily on manual underwriting. Needed a robust, scalable system that dynamically adjusted based on borrower risk profiles.</p>
+              </div>
+              <div class="cs-section">
+                <div class="cs-label">Approach & Model</div>
+                <p class="proj-desc">Engineered an end-to-end predictive pipeline utilizing XGBoost. Embedded strict ECOA compliance guardrails to ensure fairness across tiers while optimizing potential ROI.</p>
+              </div>
               <div class="proj-kpis">
                 <div>
                   <div class="proj-kpi-val">↓25%</div>
                   <div class="proj-kpi-label">Manual Effort</div>
                 </div>
                 <div>
-                  <div class="proj-kpi-val">ECOA</div>
+                  <div class="proj-kpi-val">100%</div>
                   <div class="proj-kpi-label">Compliant</div>
                 </div>
               </div>
@@ -2140,13 +2287,15 @@
             </div>
             <div class="proj-body">
               <div class="proj-tag">02 / Graph ML</div>
-              <h3 class="proj-title">Graph-Based ETA Optimizer</h3>
-              <p class="proj-desc">
-                A Spatio-Temporal GNN for traffic congestion prediction across
-                50,000+ road segments. Achieved 18% MAE reduction during peak
-                hours and enabled generalization to new road networks without
-                retraining. ETL fully automated with Airflow.
-              </p>
+              <h3 class="proj-title">Spatio-Temporal ETA Optimizer</h3>
+              <div class="cs-section">
+                <div class="cs-label">Context & Problem</div>
+                <p class="proj-desc">Existing operational models struggled to accurately forecast delivery times across highly congested networks, leading to systemic operational delays.</p>
+              </div>
+              <div class="cs-section">
+                <div class="cs-label">Approach & Pipeline</div>
+                <p class="proj-desc">Constructed a Spatio-Temporal Graph Neural Network (GNN) modeling 50,000+ interconnected road segments. Built automated ETL workflows via Airflow to handle real-time ingestion.</p>
+              </div>
               <div class="proj-kpis">
                 <div>
                   <div class="proj-kpi-val">↓18%</div>
@@ -2251,7 +2400,7 @@
               </p>
             </div>
             <div style="margin-top: 26px">
-              <a href="#contact" class="btn-gold">→ Open to Opportunities</a>
+              <a href="#contact" class="btn-cyan">→ Open to Opportunities</a>
             </div>
           </div>
           <div class="value-items reveal d1">
@@ -2268,10 +2417,10 @@
             <div class="vi">
               <div class="vi-num">02</div>
               <div>
-                <div class="vi-title">Fintech &amp; Risk Domain Depth</div>
+                <div class="vi-title">High-Stakes Technical Rigor</div>
                 <div class="vi-desc">
-                  Hands-on with financial risk modeling, ECOA compliance, and
-                  regulatory explainability at Fidelity Investments.
+                  Extensive experience delivering scalable, explainable predictive models
+                  within stringent, enterprise-level compliance frameworks.
                 </div>
               </div>
             </div>
@@ -2319,7 +2468,7 @@
           <div class="reveal">
             <div class="sec-label">Contact</div>
             <h2 class="contact-headline" style="margin-top: 10px">
-              Let's build<br />something <span class="gold">exceptional</span
+              Let's build<br />something <span class="cyan">exceptional</span
               ><br />together.
             </h2>
             <p class="contact-sub">
@@ -2345,12 +2494,12 @@
               <div class="cl-icon">📱</div>
               <div>
                 <div class="cl-label">Phone</div>
-                <div class="cl-val">+1 732 220 7712</div>
+                <div class="cl-val">+1 732 207 8712</div>
               </div>
               <div class="cl-arr">→</div>
             </a>
             <a
-              href="https://linkedin.com/in/[your-linkedin]"
+              href="https://www.linkedin.com/in/rushabhparmar819/"
               target="_blank"
               class="cl"
             >
@@ -2362,7 +2511,7 @@
               <div class="cl-arr">→</div>
             </a>
             <a
-              href="https://github.com/[your-github]"
+              href="https://github.com/rushabh819"
               target="_blank"
               class="cl"
             >
@@ -2426,8 +2575,31 @@
         });
         navAs.forEach((a) => {
           a.style.color =
-            a.getAttribute("href") === "#" + c ? "var(--gold)" : "";
+            a.getAttribute("href") === "#" + c ? "var(--cyan)" : "";
         });
+      });
+
+      // Theme Toggle Logic
+      const themeBtn = document.getElementById("theme-toggle");
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme) {
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        themeBtn.textContent = currentTheme === "light" ? "🌙" : "☀️";
+      } else {
+        themeBtn.textContent = "☀️";
+      }
+
+      themeBtn.addEventListener("click", () => {
+        let theme = document.documentElement.getAttribute("data-theme");
+        if (theme === "light") {
+          document.documentElement.removeAttribute("data-theme");
+          localStorage.setItem("theme", "dark");
+          themeBtn.textContent = "☀️";
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+          themeBtn.textContent = "🌙";
+        }
       });
     </script>
   </body>
